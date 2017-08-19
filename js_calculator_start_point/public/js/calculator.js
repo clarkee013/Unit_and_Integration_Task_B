@@ -18,9 +18,15 @@ Calculator.prototype = {
   multiply: function(number){
     this.runningTotal = parseFloat(this.previousTotal) * parseFloat(number);
   },
-
+  // if the number is equal zero
+  // then make the running total zero
+  // otherwise do the normal calculation
   divide: function(number){
+    if(number === 0){
+      this.runningTotal = 0 
+    } else {
     this.runningTotal = parseFloat(this.previousTotal) / parseFloat(number);
+    }
   },
 
   numberClick: function(number) {
